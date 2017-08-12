@@ -3,7 +3,7 @@ from pycorenlp import StanfordCoreNLP
 import pickle
 import codecs
 import os
-from final_coref import resolve_corefs
+from resolving_coref_sentences import resolve_corefs
 from global_json_relations_from_sentenes import get_sentence_relations
 from temporal_json_relations_from_sentences import get_temporal_sentence_relations
 
