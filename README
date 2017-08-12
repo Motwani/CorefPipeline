@@ -1,0 +1,20 @@
+File Description
+
+1) Global_Json_relations_from_sentences.py
+    Get a JSON output of ALL the sentences in the text.
+    JSON output is structured like [P.Noun,Verb,Noun]
+
+2) Temporal_Json_relations_from_sentences.py
+    Get a JSON output of the sentences in the text indicating any time relation.
+    JSON output is structured like [P.Noun,Verb,Noun]
+
+3) Final_Coref.py
+    Input: Text File with Story
+    Output: Text file with resolved coreference relations
+
+4) p1.pkl
+    Input: Resolved Story File
+    Stores the POS and NER relations of the File
+
+5) Script.py
+    Pipeline file for all functions

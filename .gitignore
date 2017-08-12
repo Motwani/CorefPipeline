@@ -42,3 +42,5 @@ wheels/
 *.zip
 *.tar.gz
 *.rar
+
+*.json
