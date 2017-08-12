@@ -94,11 +94,11 @@ if __name__ == '__main__':
         lines = f.read()
     # print lines
     # raw_input()
-    # ans = nlp.annotate(lines, properties={'annotators':'pos,ner,lemma,tokenize'})
+    ans = nlp.annotate(lines, properties={'annotators':'pos,ner,lemma,tokenize'})
     # ans = json.loads(ans)
 
-    # pickle.dump(ans,open('p1.pkl','w'))
-    ans = pickle.load(open('data/p1.pkl'))
+    pickle.dump(ans,open('data/Resolved_The_Adv_Blue_Carbuncle.pkl','w'))
+    # ans = pickle.load(open('data/Resolved_The_Adv_Blue_Carbuncle.pkl'))
     ans = json.loads(ans)
     # print ans
     # raw_input()

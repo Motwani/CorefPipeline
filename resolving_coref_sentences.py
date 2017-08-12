@@ -1,31 +1,8 @@
-import json
-from pycorenlp import StanfordCoreNLP
-import pickle
-import codecs
-
-# nlp = StanfordCoreNLP('http://localhost:9000')
-
-# with open('The_Adv_Blue_Carbuncle.txt') as f:
-    # lines = f.read()
-
-# ans = nlp.annotate(lines, properties={'annotators':'tokenize,ssplit,pos,lemma,ner,parse,mention,coref','coref.algorithm':'neural'})
-# ans = nlp.annotate(lines, properties={'annotators':'tokenize,ssplit,pos,lemma,ner,parse,mention,coref'})
-
-# ans = json.loads(ans)
-# with open('The_Adv_Blue_Carbuncle.txt.json') as json_data:
-    # ans = json.load(json_data)
-
-# print ans
-# pickle.dump(ans, open('The_Adv_Blue_Carbuncle.pkl','w'))
-ans = pickle.load(open('The_Adv_Blue_Carbuncle.pkl'))
-ans = json.loads(ans)
-
-tokens = []
-final = []
-ftokens = []
-
-
 def resolve_corefs(ans):
+    tokens = []
+    final = []
+    ftokens = []
+
     #Map all mentions with their referents
     mdict = {}  #Mention dict
     mlist = []
@@ -93,5 +70,11 @@ def resolve_corefs(ans):
 
     return ntokens
 
-# ntokens = resolve_corefs(ans)
-# print ntokens
+if __name__ == '__main__':
+
+    with open('data/story_files/The_Adv_Blue_Carbuncle.txt') as f:
+        lines = f.read()
+    ans = nlp.annotate(lines, properties={'annotators':'tokenize,ssplit,pos,lemma,ner,parse,mention,coref','coref.algorithm':'neural'})
+    ans = json.loads(ans)
+    ntokens = resolve_corefs(ans)
+    print ntokens

@@ -82,15 +82,15 @@ def get_sentence_relations(ans):
 if __name__ == "__main__":
     nlp = StanfordCoreNLP('http://localhost:9000')
 
-    with open('Resolved_The_Adv_Blue_Carbuncle.txt','r') as f:
+    with open('data/story_files/Resolved_The_Adv_Blue_Carbuncle.txt','r') as f:
         lines = f.read()
     # print lines
     # raw_input()
     ans = nlp.annotate(lines, properties={'annotators':'pos,ner,lemma,tokenize'})
     # ans = json.loads(ans)
 
-    # pickle.dump(ans,open('p1.pkl','w'))
-    ans = pickle.load(open('data/p1.pkl'))
+    pickle.dump(ans,open('data/Resolved_The_Adv_Blue_Carbuncle.pkl','w'))
+    # ans = pickle.load(open('data/Resolved_The_Adv_Blue_Carbuncle.pkl'))
     ans = json.loads(ans)
     # print ans
 
