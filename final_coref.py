@@ -12,13 +12,13 @@ import codecs
 # ans = nlp.annotate(lines, properties={'annotators':'tokenize,ssplit,pos,lemma,ner,parse,mention,coref'})
 
 # ans = json.loads(ans)
-with open('The_Adv_Blue_Carbuncle.txt.json') as json_data:
-    ans = json.load(json_data)
+# with open('The_Adv_Blue_Carbuncle.txt.json') as json_data:
+    # ans = json.load(json_data)
 
 # print ans
 # pickle.dump(ans, open('The_Adv_Blue_Carbuncle.pkl','w'))
-# ans = pickle.load(open('The_Adv_Blue_Carbuncle.pkl'))
-# ans = json.loads(ans)
+ans = pickle.load(open('The_Adv_Blue_Carbuncle.pkl'))
+ans = json.loads(ans)
 
 tokens = []
 final = []
@@ -93,5 +93,5 @@ def resolve_corefs(ans):
 
     return ntokens
 
-ntokens = resolve_corefs(ans)
-print ntokens
+# ntokens = resolve_corefs(ans)
+# print ntokens
