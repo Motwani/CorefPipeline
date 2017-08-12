@@ -12,7 +12,7 @@ import codecs
 # ans = nlp.annotate(lines, properties={'annotators':'tokenize,ssplit,pos,lemma,ner,parse,mention,coref'})
 
 # ans = json.loads(ans)
-with open('The_Adv_Blue_Carbuncle.txt.json') as json_data:
+with open('data/The_Adv_Blue_Carbuncle.txt.json') as json_data:
     ans = json.load(json_data)
 
 # print ans
