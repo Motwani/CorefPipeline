@@ -90,7 +90,7 @@ if __name__ == "__main__":
     # ans = json.loads(ans)
 
     # pickle.dump(ans,open('p1.pkl','w'))
-    ans = pickle.load(open('p1.pkl'))
+    ans = pickle.load(open('data/p1.pkl'))
     ans = json.loads(ans)
     # print ans
 
