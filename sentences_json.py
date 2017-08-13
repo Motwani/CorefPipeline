@@ -21,4 +21,4 @@ for i in range(len(ans['sentences'])):
     js[i+1] = sentence
 
 js = json.dumps(js)
-print js
+print(js)

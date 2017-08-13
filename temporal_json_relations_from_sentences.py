@@ -97,7 +97,7 @@ if __name__ == '__main__':
     ans = nlp.annotate(lines, properties={'annotators':'pos,ner,lemma,tokenize'})
     # ans = json.loads(ans)
 
-    pickle.dump(ans,open('data/Resolved_The_Adv_Blue_Carbuncle.pkl','w'))
+    pickle.dump(ans,open('data/Resolved_The_Adv_Blue_Carbuncle.pkl','wb'))
     # ans = pickle.load(open('data/Resolved_The_Adv_Blue_Carbuncle.pkl'))
     ans = json.loads(ans)
     # print ans
@@ -109,5 +109,5 @@ if __name__ == '__main__':
         #print "---------------"
         #raw_input()
     # relations = json.dumps(relations)
-    print relations
+    print(relations)
     # print "---------------------"

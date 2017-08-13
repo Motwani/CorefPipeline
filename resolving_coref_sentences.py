@@ -77,4 +77,4 @@ if __name__ == '__main__':
     ans = nlp.annotate(lines, properties={'annotators':'tokenize,ssplit,pos,lemma,ner,parse,mention,coref','coref.algorithm':'neural'})
     ans = json.loads(ans)
     ntokens = resolve_corefs(ans)
-    print ntokens
+    print(ntokens)
