@@ -106,8 +106,9 @@ def make_rank_html(entity_ranking, sentence_score_list):
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Sentence Number</th>
+            <th>Sentence Rank</th>
             <th>Sentence</th>
+            <th>Sentence Score</th>
           </tr>
         </thead>
         <tbody>
@@ -117,6 +118,7 @@ def make_rank_html(entity_ranking, sentence_score_list):
         html_string += '<tr>'
         html_string += '<td>{0}</td>'.format(i + 1)
         html_string += '<td>{0}</td>'.format(sen[0])
+        html_string += '<td>{0}</td>'.format(sen[1])
         html_string += '</tr>'
 
     html_string += '</tbody></table></div>'
@@ -127,8 +129,9 @@ def make_rank_html(entity_ranking, sentence_score_list):
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Entity Number</th>
+            <th>Entity Rank</th>
             <th>Entity</th>
+            <th>Entity Score</th>
           </tr>
         </thead>
         <tbody>
@@ -139,6 +142,7 @@ def make_rank_html(entity_ranking, sentence_score_list):
         html_string += '<tr>'
         html_string += '<td>{0}</td>'.format(i + 1)
         html_string += '<td>{0}</td>'.format(ent[0])
+        html_string += '<td>{0}</td>'.format(ent[1])
         html_string += '</tr>'
 
     html_string += '</tbody></table></div></body></html>'
